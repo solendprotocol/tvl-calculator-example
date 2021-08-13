@@ -2,6 +2,8 @@ const BufferLayout = require("buffer-layout");
 const Layout = require("./utils/layout");
 const { LastUpdateLayout } = require("./lastUpdate");
 
+const OBLIGATION_LEN = 1300;
+
 const ObligationLayout = BufferLayout.struct([
   BufferLayout.u8("version"),
   LastUpdateLayout,
@@ -95,6 +97,30 @@ const ObligationParser = (pubkey, info) => {
   return details;
 };
 
+function obligationToString(obligation) {
+  return JSON.stringify(
+    obligation,
+    (key, value) => {
+      // Skip padding
+      if (key === "padding") {
+        return null;
+      }
+      switch (value.constructor.name) {
+        case "PublicKey":
+          return value.toBase58();
+        case "BN":
+          return value.toString();
+        default:
+          return value;
+      }
+    },
+    2
+  );
+}
+
 module.exports = {
+  ObligationLayout,
   ObligationParser,
+  OBLIGATION_LEN,
+  obligationToString,
 };
