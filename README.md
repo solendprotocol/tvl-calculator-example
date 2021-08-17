@@ -1,6 +1,6 @@
 # Solend Total Value Locked Calculator Demo
 
-Pure javascript utility to compute total deposits and borrows from on-chain data.
+Pure javascript utility to compute total deposits and borrows from on-chain data. Works by fetching obligation for every user and computing a sum of `deposits` and `borrows` (obligation properties) for each asset.
 
 Useful as a demo for reading on-chain Solend data.
 
