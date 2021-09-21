@@ -11,9 +11,13 @@ const LENDING_MARKET_MAIN = "4UpD2fh7xH3VP9QQaXtsS1YY3bxzWhtfpks7FatyKvdY";
 const OBLIGATION_LEN = 1300;
 const RESERVES_TO_ASSET_MAP = {
   "8PbodeaosQP19SjYFx855UMqWxH2HynZLdBXmsrbac36": "SOL",
-  BgxfHJDzm44T7XG68MYKx7YisTjZu73tVovyZSjJMpmw: "USDC",
+  "BgxfHJDzm44T7XG68MYKx7YisTjZu73tVovyZSjJMpmw": "USDC",
   "3PArRsZQ6SLkr1WERZWyC6AqsajtALMq4C66ZMYz4dKQ": "ETH",
-  GYzjMCXTDue12eUGKKWAqtF5jcBYNmewr6Db6LaguEaX: "BTC",
+  "GYzjMCXTDue12eUGKKWAqtF5jcBYNmewr6Db6LaguEaX": "BTC",
+  "8K9WC8xoh2rtQNY7iEGXtPvfbDCi563SdWhCAhuMP2xE": "USDT",
+  "9n2exoMQwMTzfw6NFoFFujxYPndWVLtKREJePssrKb36": "RAY",
+  "5suXmvdbKQ98VonxGCXqViuWRu8k4zgZRxndYKsH2fJg": "SRM",
+  "2dC4V23zJxuv521iYQj8c471jrxYLNQFaGS6YPwtTHMd": "FTT",
 };
 
 async function main() {
