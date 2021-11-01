@@ -12,12 +12,14 @@ const OBLIGATION_LEN = 1300;
 const RESERVES_TO_ASSET_MAP = {
   "8PbodeaosQP19SjYFx855UMqWxH2HynZLdBXmsrbac36": "SOL",
   "BgxfHJDzm44T7XG68MYKx7YisTjZu73tVovyZSjJMpmw": "USDC",
+  "8K9WC8xoh2rtQNY7iEGXtPvfbDCi563SdWhCAhuMP2xE": "USDT",
   "3PArRsZQ6SLkr1WERZWyC6AqsajtALMq4C66ZMYz4dKQ": "ETH",
   "GYzjMCXTDue12eUGKKWAqtF5jcBYNmewr6Db6LaguEaX": "BTC",
-  "8K9WC8xoh2rtQNY7iEGXtPvfbDCi563SdWhCAhuMP2xE": "USDT",
-  "9n2exoMQwMTzfw6NFoFFujxYPndWVLtKREJePssrKb36": "RAY",
   "5suXmvdbKQ98VonxGCXqViuWRu8k4zgZRxndYKsH2fJg": "SRM",
   "2dC4V23zJxuv521iYQj8c471jrxYLNQFaGS6YPwtTHMd": "FTT",
+  "9n2exoMQwMTzfw6NFoFFujxYPndWVLtKREJePssrKb36": "RAY",
+  "Hthrt4Lab21Yz1Dx9Q4sFW4WVihdBUTtWRQBjPsYHCor": "SBR",
+  "5Sb6wDpweg6mtYksPJ2pfGbSyikrhR8Ut8GszcULQ83A": "MER"
 };
 
 async function main() {
