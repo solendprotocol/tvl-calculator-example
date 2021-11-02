@@ -21,16 +21,33 @@ const RESERVES_TO_ASSET_MAP = {
   "Hthrt4Lab21Yz1Dx9Q4sFW4WVihdBUTtWRQBjPsYHCor": "SBR",
   "5Sb6wDpweg6mtYksPJ2pfGbSyikrhR8Ut8GszcULQ83A": "MER"
 };
+const ASSET_TO_DECIMALS = {
+  "SOL": 9,
+  "USDC": 6,
+  "ETH": 6,
+  "BTC": 6,
+  "SRM": 6,
+  "USDT": 6,
+  "MER": 6,
+  "FTT": 6,
+  "SBR": 6,
+  "UST": 9,
+  "RAY":6
+};
 
 async function main() {
   const [totalDeposits, totalBorrows] = await getTotalDepositsAndBorrows();
   console.log("Total Deposits:");
-  for (const [reserve, balance] of Object.entries(totalDeposits)) {
-    console.log(reserve, balance.toString());
+  for (const [asset, rawBalance] of Object.entries(totalDeposits)) {
+    const balance = rawBalance.div(new BN(10 ** ASSET_TO_DECIMALS[asset]));
+    console.log(asset, balance.toString());
   }
+  
+  console.log("\n");
   console.log("Total Borrows:");
-  for (const [reserve, balance] of Object.entries(totalBorrows)) {
-    console.log(reserve, balance.toString());
+  for (const [asset, rawBalance] of Object.entries(totalBorrows)) {
+    const balance = rawBalance.div(new BN(10 ** ASSET_TO_DECIMALS[asset]));
+    console.log(asset, balance.toString());
   }
 }
 
